@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.header{
+    z-index: 999;
+}
+
+.headerContainer{
+    max-width: 64rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
+    padding-top: 20px;
+    padding-inline: 70px;
+    background-color: #e1e3e9;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.headerLeft > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headerLeft > div >p{
+    font-size: 18px;
+}
+
+.headerLeft > img{
+    width: 200px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.headerRight{
+    flex:1;
+    gap: 50px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.viewCode{
+    width: 95px;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    border-radius: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 300ms;
+    border: 2px solid hsl(180, 66%, 49%);
+}
+
+.viewCode:hover{
+    background-color: hsl(0, 87%, 67%);
+    color: white;
+    border: 2px solid black;
+}
+
+.about, .documentation{
+    color: hsl(0, 0%, 63%);
+    font-weight: 700;
+}
+
+.about > p, .documentation > p{
+    cursor: pointer;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.about >p:hover, .documentation > p:hover{
+    color: black;
+}
+
+.intro{
+    justify-content: space-between;
+    border-bottom-left-radius: 100px;
+}
+
+.introContainer{
+    max-width: 64rem;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-block: 70px;
+}
+
+.infoDiv{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.screamer{
+    font-size: 100px;
+    font-weight: 700;
+    color: hsl(257, 27%, 26%);
+    align-self: flex-start;
+}
+
+.screamer > p{
+    line-height: 100px;
+}
+
+.description{
+    font-size: 24px;
+    color: hsl(257, 7%, 63%);
+    font-weight: 700px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.imageDiv{
+    object-fit: contain;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.imageDiv >img{
+    height: 400px;
+    object-fit: contain;
+}
+
+.imageDiv:hover{
+    transform: scale(110%);
+}
+
+.statDiv{
+    background-image: linear-gradient(to right, #307d94,hsl(180, 66%, 49%) 20%, white 65%);
+}
+
+.statDivContainer{
+    max-width: 64rem;
+    display: flex;
+    margin: auto;
+    gap: 100px;
+}
+
+.malwareIncrease, .mwEveryday, .ransomwareDamage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15px;    
+}
+
+.malwareIncrease>h1:hover, .mwEveryday>h1:hover, .ransomwareDamage>h1:hover{
+    transform: scale(1.25);
+}
+
+.statNumber {
+    transition: all;
+    transition-duration: 300ms;
+    cursor:default;
+    margin-block-end: 0 !important;
+    margin-block-start: 0 !important;
+    font-size: 50px;
+    color: hsl(237, 17%, 21%)
+}
+
+.statDesc{
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.slideShow{
+    margin-top: 100px;
+    position: relative;
+}
+
+.slideShowGray{
+    background-color: #e1e3e9;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.slideShowContainer{
+    position: relative;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-image: url('/static/images/bg-boost-desktop.svg');
+    background-color: hsl(257, 27%, 26%);
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+iframe{
+    margin: 60px;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+iframe:hover{
+    transform: scale(105%);
+}
+
+.demo{
+    background-color: #e1e3e9;
+    padding: 100px;
+}
+
+.demoTitle{
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.demoTitleDesc{
+    color:hsl(0, 0%, 63%);
+    font-size: 30px
+}
+
+.demoTitleHead{
+    font-size: 50px;
+    font-weight: 700;
+    color: hsl(257, 27%, 26%);
+}
+
+.demoContainer{
+    max-width: 64rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.demoImgDiv{
+    position: relative;
+}
+
+.demoImgDiv > img{
+    height: 400px;   
+    object-fit: contain;
+}
+
+.demoInputDiv{
+    min-width: 20rem;
+    background-color: white;
+    border: 5px solid hsl(0, 87%, 67%);
+    border-radius: 10px;
+    padding-block: 20px;
+    font-family: 'Space Mono', monospace;
+}
+
+.demoInputDiv > form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.portInput, .messageInput, .submitButton, .outputDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.portInput > p, .messageInput > p, .outputDiv > p{
+    font-size: 18px;
+    font-weight: 700;
+    align-self: flex-start;
+    padding-inline: 30px;
+}
+
+.portInput > input, .messageInput > textarea, .outputDiv > input{
+    max-width: 80%;
+    border-width: 0px;
+    border: none;
+    background-color: #e1e3e9;
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+    color:#307d94
+}
+
+textarea{
+    resize: none;
+}
+
+.portInput > input:focus{
+    outline-width: 0;
+}
+
+.submitButton{
+    align-self: center;
+    width: 70%;
+    font-weight: 700;
+    background-color: hsl(180, 66%, 49%);
+    border: 2px solid hsl(180, 66%, 49%);
+    border-radius: 100px;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    transition: all;
+    transition-duration: 300ms ;
+}
+
+.outputDiv{
+    margin-top: 20px;
+}
+
+.submitButton:hover{
+    background-color: hsl(0, 87%, 67%);
+    border: 2px solid black;
+}
+
+.outputDiv > p{
+    align-self: center;
+}
+
+.outro{
+    background-color: hsl(257, 27%, 26%);
+    background-image: url('/static/images/bg-boost-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-block: 50px;
+}
+
+.outro > p{
+    font-size: 35px;
+
+}
+
+.outro > .viewCode{
+    height: 48px;
+    width: 10rem;
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.outro > .viewCode:hover{
+    border: 2px solid white;
+}
+
+.footer{
+    background-color: hsl(260, 8%, 14%);
+}
+
+.people{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.footerContainer{
+    margin: auto;
+    padding-block: 50px;
+    padding-inline: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footerContainer > img {
+    height: 100px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.authorsTitle{
+    transform: rotate(-90deg);
+}
+
+.authorsTitle > p{
+    font-size: 40px;
+    color: #307d94;
+}
+
+.author{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.author > img{
+    height: 70px;
+    object-fit: contain;
+    border-radius: 9999px;
+    transition: all;
+    transition-duration: 300ms;
+    padding: 3px;
+    border: 2px solid white;
+}
+.author > img:hover{
+    transform: scale(110%);
+}
+
+
+.authorName{
+    color: white;
+    font-size: 24px;
+}
+
+.authorEmail{
+    color: hsl(0, 0%, 75%);
+    text-align: center;
+    line-height: 20px;
+}
+
+
+
+
+
+
