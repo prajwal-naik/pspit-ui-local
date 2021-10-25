@@ -1,4 +1,16 @@
 $(document).ready(function(){
+
+    $(document).on("click", ".startPseudoServer", function(event){
+        event.preventDefault();
+        $.ajax({
+            type: "GET",
+            url:"/startPS",
+            success: function(res) {
+                print(res)
+            }
+        })
+    });
+
     $(document).on("click", ".submitButton", function(event) {
         event.preventDefault();
         var port = $("#port").val();
@@ -23,14 +35,6 @@ $(document).ready(function(){
                 // $("#btnSubmit").prop("disabled", false);
  
             }
-            // ,
-            // error: function (e) {
- 
-            //     $("#output").text(e.responseText);
-            //     console.log("ERROR : ", e);
-            //     $("#btnSubmit").prop("disabled", false);
- 
-            // }
         });
     });
 });

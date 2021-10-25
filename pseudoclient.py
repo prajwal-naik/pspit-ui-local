@@ -11,6 +11,8 @@ def respondHeartBeat(toClientPort):
     toClientConnSocket.send("new".encode())
     return toClientConnSocket, toClientSocket
 
+
+# def main():
 #---------------------client to pseudo-client------------------------------------------
 fromClientPort = 12000
 fromClientSocket = socket(AF_INET, SOCK_STREAM)
@@ -77,6 +79,9 @@ print("Sent server response...\n")
 toClientConnSocket.close()
 toClientSocket.close()
 
+
+# if __name__ == "__main__":
+#     main()
 
 
 
