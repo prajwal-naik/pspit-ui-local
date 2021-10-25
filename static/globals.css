@@ -265,7 +265,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     border-radius: 30px;
     background-image: url('/static/images/bg-boost-desktop.svg');
-    background-color: hsl(257, 27%, 26%);
+    background-color: #3b3054;
     background-size: cover;
     object-fit: contain;
     background-repeat: no-repeat;   
@@ -450,9 +450,6 @@ textarea{
 
 .outro{
     background-color: #3b3054;
-    /* background-image: url('/static/images/bg-boost-desktop.svg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -480,9 +477,6 @@ textarea{
 
 .footer{
     background-color: #232127;
-    /* background-image: url("./images/layered-waves-haikei-pb.svg");
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .people{
@@ -498,7 +492,6 @@ textarea{
     padding-inline: 100px;
     display: flex;
     justify-content: space-between;
-    /* gap: 20px; */
 }
 
 .footerContainer > img {
