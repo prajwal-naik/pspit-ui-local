@@ -6,7 +6,7 @@ $(document).ready(function(){
             type: "GET",
             url:"/startPS",
             success: function(res) {
-                print(res)
+                console.log(res)
             }
         })
     });

@@ -15,9 +15,9 @@ body{
     background-repeat: no-repeat; */
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .scrollToTop {
     display: none;
@@ -242,7 +242,7 @@ body::-webkit-scrollbar {
     background-image: url("/static/images/layered-waves-haikei-gw.svg");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0px -650px;
+    background-position: 0px -550px;
 }
 
 .slideShowGray{

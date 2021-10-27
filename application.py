@@ -1,5 +1,5 @@
 from logging import debug
-import re
+import os
 from flask import Flask, render_template, request
 import subprocess
 import client
@@ -14,6 +14,9 @@ def index():
 @app.route("/startPS")
 def startPS():
     subprocess.call('start /wait python pseudoclient.py', shell=True)
+    # startupinfo = subprocess.STARTUPINFO()
+    # startupinfo.dwFlags |= subprocess._subprocess.STARTF_USESHOWWINDOW
+    # subprocess.call('start /wait python pseudoclient.py', shell=True)
     return("Pseudo-server: LIVE")
 
 @app.route("/startDemo", methods = ["GET", "POST"])

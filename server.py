@@ -26,10 +26,12 @@ def main():
         clientReq = pseudoServerSocket.recv(1024)
         print("Server recieved request: {}\n".format(clientReq.decode()))
         print("Server preparing response...\n")
-        response = clientReq.decode()
+        # response = clientReq.decode()
+        response = input().encode()
 
 #-----------------send request to pseudo-server----------------------------------------
-        pseudoServerSocket.send(response.encode())
+        # pseudoServerSocket.send(response.encode())
+        pseudoServerSocket.send(response)
         print("Server sent response...\n")
         pseudoServerSocket.close()
 
