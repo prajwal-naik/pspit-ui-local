@@ -29,7 +29,9 @@ fromClientSocket.close()
 #----------------------------------pseudo-client to pseudo-server------------------------
 # time.sleep(5)
 toPseudoServerPort = 13000
-toPseudoServerName = "26.252.9.38"  #added pseudo-server ip address
+# toPseudoServerName = "26.252.9.38"  #added pseudo-server ip address
+toPseudoServerName = "localhost"  #added pseudo-server ip address
+
 toPseudoServerSocket = socket(AF_INET, SOCK_STREAM)
 toPseudoServerSocket.connect((toPseudoServerName,toPseudoServerPort))
 toPseudoServerSocket.send(dataFromClient.encode())

@@ -16,7 +16,9 @@ def respondHeartBeat(toServerPort):
 # time.sleep(5)
 fromPseudoClientPort = 13000
 fromPseudoClientSocket = socket(AF_INET, SOCK_STREAM)
-fromPseudoClientSocket.bind(("26.252.9.38", fromPseudoClientPort)) #add pseudo-server ip address
+# fromPseudoClientSocket.bind(("26.252.9.38", fromPseudoClientPort)) #add pseudo-server ip address
+fromPseudoClientSocket.bind(("localhost", fromPseudoClientPort)) #add pseudo-server ip address
+
 print("Listening for client request...\n")
 fromPseudoClientSocket.listen(1)
 fromPseudoClientConnSocket, pseudoClientAddr = fromPseudoClientSocket.accept()
@@ -44,18 +46,31 @@ toServerSocket.close()
 #----------------timer for demo purpose-----------------------------------------
 print(".....Sleeping for 10 secs for demo purposes only.....")
 time.sleep(10)
+
 #---------------pseudo-server_ pseudo-client--------------------------------------------
 
 toPseudoClientSocket = socket(AF_INET, SOCK_STREAM)
-toPseudoClientSocket.bind(("26.252.9.38", fromPseudoClientPort)) #add pseudo-server ip address
+# toPseudoClientSocket.bind(("26.252.9.38", fromPseudoClientPort)) #add pseudo-server ip address
+toPseudoClientSocket.bind(("localhost", fromPseudoClientPort)) #add pseudo-server ip address
+
 toPseudoClientSocket.listen(1)
+print("listening for client connection\n")
+# while(1):
+#     try:
+#         toPseudoClientConnSocket, pseudoClientAddr = toPseudoClientSocket.accept()
+#         break
+#     except:
+#         pass
+
 toPseudoClientConnSocket, pseudoClientAddr = toPseudoClientSocket.accept()
-
+print("client connected\n")
+rts=toPseudoClientConnSocket.recv(1024).decode()
+#print(".....Sleeping for 10 secs for demo purposes only.....")
+#time.sleep(10)
 toPseudoClientConnSocket.send(res.encode())
-
 toPseudoClientConnSocket.close()
 toPseudoClientSocket.close()
-#print("line 56 closed\n")
+# print("line 56 closed\n")
 
 
 
